@@ -67,8 +67,8 @@ base_dir = os.path.join(os.environ['HOME'], 'project/runs') if not args.log_dir 
 
 print("args in this experiment:\n%s" % '\n'.join(str(e) for e in sorted(vars(args).items())))
 
-device = torch.device("cuda")
-args.device = device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print('Using ', device)
 
 # define loss function
 def criterion(output, target_var):

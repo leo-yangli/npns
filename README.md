@@ -18,6 +18,7 @@ This repository contains the code for [Neural Plasticity Networks ](https://arxi
 
 ## Requirements
     pytorch==1.3
+    tensorboard
 
 ## Usage
     python train_syn.py --k 7 --mode "sparse" --init_size 100 80 --stage1 500 --stage2 1000 --lambas 0.35 14
