@@ -72,9 +72,9 @@ print('Using ', device)
 
 # define loss function
 def criterion(output, target_var):
-    loss = torch.nn.CrossEntropyLoss().to(args.device)(output, target_var)
+    loss = torch.nn.CrossEntropyLoss().to(device)(output, target_var)
     reg_loss = model.regularization()
-    total_loss = (loss + reg_loss).to(args.device)
+    total_loss = (loss + reg_loss).to(device)
     return total_loss
 
 
@@ -95,7 +95,7 @@ def visualize_contour(epoch, acc, model, d_i, x_data, y_data, basis, val_loader,
 
     test_x = np.dot(test_x_org, basis)
     model.eval()
-    f_p_y_given_x = model(torch.FloatTensor(test_x).to(args.device))
+    f_p_y_given_x = model(torch.FloatTensor(test_x).to(device))
     pred = nfunc.softmax(f_p_y_given_x, dim=1)[:, 1].cpu().detach().numpy()
 
     z = np.zeros((range_x.shape[0], range_x.shape[0]))
