@@ -31,9 +31,9 @@ This repository contains the code for [Neural Plasticity Networks ](https://arxi
 ## Citation
 If you found this code useful, please cite our paper.
 
-    @article{li2019neural,
+    @article{npn2021,
       title={Neural Plasticity Networks},
       author={Li, Yang and Ji, Shihao},
-      journal={arXiv preprint arXiv:1908.08118},
-      year={2019}
+      journal={International Joint Conference on Neural Networks (IJCNN)},
+      year={2021}
     }
