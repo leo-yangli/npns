@@ -22,11 +22,14 @@ This repository contains the code for [Neural Plasticity Networks ](https://arxi
     matplotlib
 
 ## Usage
-    python train_syn.py --k 7 --mode "sparse" --init_size 100 80 --stage1 500 --stage2 1000 --lambas 0.35 14
-    python train_syn.py --k 1 --mode "expand" --init_size 3 3 --stage1 100 --stage2 1000 --lambas 0.35 14
-    python train_lenet.py --k 7 --mode "sparse" --init_size 20 50 500
-    python train_lenet.py --k 1 --mode "expand" --init_size 3 3 3
-    
+    python train_syn.py --k 7 --mode sparse --init_size 100 80 --stage1 500 --stage2 1000 --lambas 0.35 14
+    python train_syn.py --k 1 --mode expand --init_size 3 3 --stage1 100 --stage2 1000 --lambas 0.35 14
+    python train_lenet.py --k 7 --mode sparse --init_size 20 50 500
+    python train_lenet.py --k 1 --mode expand --init_size 3 3 3    
+    python train_resnet56.py --num_class 10 --mode expand --init_factor 0.5 0.5 0.3 0.2 0.8 --lamba 0
+    python train_resnet56.py --num_class 100 --mode expand --init_factor 0.5 0.5 0.3 0.2 0.8 --lamba 0
+    python train_resnet56.py --num_class 10 --mode sparse --init_factor -1 --lamba 1e-5
+    python train_resnet56.py --num_class 100 --mode sparse --init_factor -1 --lamba 1e-5
         
 ## Citation
 If you found this code useful, please cite our paper.
